@@ -51,7 +51,15 @@ except Exception as inst:
     print('x =', x)
     print('y =', y)
 
+
 # raise NameError('HiThere')
 
 # raise ValueError
 
+class MyValidationError(Exception):
+
+    def __init__(self, message):
+        self.messages = message
+
+
+raise MyValidationError("My error")
